@@ -1,0 +1,6 @@
+MarginCollateralConfiguration_Load_Unit_Test
+└── when load is called
+    ├── it should return the maximum deposit cap
+    ├── it should return the loan to value
+    ├── it should return the decimals
+    └── it should return the price feed

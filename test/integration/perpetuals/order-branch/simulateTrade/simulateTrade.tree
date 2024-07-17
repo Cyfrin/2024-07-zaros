@@ -1,0 +1,31 @@
+SimulateTradeIntegrationTest
+├── given the account id does not exist
+│   └── it should revert
+└── given the account id exists
+    ├── given the perp market id does not exist
+    │      └── it should revert
+    └── given the perp market id exists
+           ├── when the size delta is zero // update after new logic
+           │   └── it should revert
+           └── when the size delta is not zero
+                ├── when there is insufficient liquidity // update after new logic
+                │    └── it should revert  // should this be hit before the others in the tree?
+                └── when there is sufficient liquidity
+                     ├── when the trading account is liquidatable
+                     │     └── it should revert
+                     └── when the trading account is not liquidatable
+                           ├── when the position size is too small
+                           │      └── it should revert
+                           └── when the position size is not too small
+                                 └── it should simulate the trade correctly
+
+
+
+//Some cases to explore: 
+//- when the size delta is less than the min trade size?
+//- given the account won't meet the margin requirements
+//- given there is no pending market order
+
+//- when the user tries to open a trade an he already has pending trades?
+
+//* some cases may be not in the function logic, but still could make sense to be there

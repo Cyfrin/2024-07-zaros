@@ -1,0 +1,5 @@
+USDToken_Burn_Test
+├── when amount is zero
+│   └── it should revert
+└── when amount is not zero
+    └── it should burn

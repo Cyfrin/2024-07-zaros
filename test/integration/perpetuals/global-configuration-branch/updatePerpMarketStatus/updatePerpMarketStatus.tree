@@ -1,0 +1,14 @@
+UpdatePerpMarketStatus_Integration_Test
+├── given perp market is not initialized
+│   └── it should revert
+└── given perp market is initialized
+    ├── when perp market is enabled and new enable status is true
+    │   └── it should revert
+    ├── when perp market is enabled and new enable status is false
+    │   ├── it should remove market
+    │   └── it should emit {LogDisablePerpMarket} event
+    ├── when perp market is not enabled and new enable status is true
+    │   ├── it should add market
+    │   └── it should emit {LogEnablePerpMarket} event
+    └── when perp market is not enabled and new enable status is false
+        └── it should revert

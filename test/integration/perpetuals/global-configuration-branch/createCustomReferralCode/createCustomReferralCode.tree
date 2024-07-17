@@ -1,0 +1,7 @@
+CreateCustomReferralCode_Integration_Test
+├── given the sender is not the owner
+│   └── it should revert
+└── given the sender is the owner
+    └── when createCustomReferralCode is called
+        ├── it should the custom referral code and referrer on storage
+        └── it should emit {LogCreateCustomReferralCode} event

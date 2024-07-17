@@ -1,0 +1,3 @@
+GetCustomReferralCode_Integration_Test
+└── when getCustomReferralCode is called
+    └── it should the address of the referrer

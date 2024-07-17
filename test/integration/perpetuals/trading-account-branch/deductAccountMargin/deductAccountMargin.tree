@@ -1,0 +1,25 @@
+DeductAccountMargin_Unit_Test
+    ├── when there is collateralLiquidationPriority //  enters for loop
+    │    ├── given the account has a margin balance different from 0
+    │    │   └── it should break the for loop
+    │    └── given the account has a margin balance of 0
+    │    ├── when the settlementFeeUsdX18 is zero
+    │    │    └── it should skip the settlementFeeUsdX18 check
+    │    ├── when settlementFeeUsdX18 is greater than zero and if the already deducted settlement fee settlementFeeDeductedUsdX18 is less than the total settlementFeeUsdX18
+    │    │   ├── it should deduct the settlement fee from the account's margin balance 
+    │    │   └── it should return isMissingMargin a boolean indicating whether there was insufficient margin to cover the fee
+    │    ├── when the orderFeeUsdX18 is zero
+    │    │    └── it should skip the orderFeeUsdX18 check
+    │    ├── when the orderFeeUsdX18 is greater than zero and if the already deducted order fee orderFeeDeductedUsdX18 is less than the total orderFeeUsdX18
+    │    │   ├── it should deduct the order fee from the account's margin balance 
+    │    │   └── it should return isMissingMargin a boolean indicating whether there was insufficient margin to cover the fee
+    │    ├── when pnlUsdX18 is zero
+    │    │    └── it should skip the pnlUsdX18 check
+    │    └── when pnlUsdX18 is greater than zero and if the already deducted PnL pnlDeductedUsdX18 is less than the total pnlUsdX18 indicating remaining PnL to be accounted for
+    │        ├── it should deduct the PnL from the account's margin balance 
+    │        └── it should return isMissingMargin a boolean indicating whether there was insufficient margin to cover the fee
+    └── when there is not collateralLiquidationPriority // outside of for loop
+         ├── it should calculate the total margin deducted in USD (by summing up three different types of deductions from an account's margin balance)
+         └── it should return the new margin balance
+
+

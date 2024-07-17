@@ -1,0 +1,3 @@
+GetSettlementConfiguration_Integration_Test
+└── given settlement is configured
+    └── it should return the market's settlement configuration

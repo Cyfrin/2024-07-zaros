@@ -1,0 +1,9 @@
+SetUsdToken_Integration_Test
+├── given the sender is not the owner
+│   └── it should revert
+└── given the sender is the owner
+    ├── when the usdToken is zero
+    │   └── it should revert
+    └── when the usdToken is not a zero
+        └── it should emit a {LogSetUsdToken} event
+        └── it should update on storage

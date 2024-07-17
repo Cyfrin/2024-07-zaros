@@ -1,0 +1,8 @@
+MarketOrderKeeper_Initialize_Integration_Test
+└── given initialize contract with some wrong information
+    ├── when address of perps engine is zero
+    │   └── it should revert
+    ├── when market id is zero
+    │   └── it should revert
+    └── when stream id is zero
+        └── it should revert

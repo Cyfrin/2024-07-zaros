@@ -1,0 +1,11 @@
+PerpMarket_CheckOpenInterestLimits_Unit_Test
+├── when the new open interest is greater than the max open interest
+│   ├── when is not reducing open interest
+│   │   └── it should revert
+│   └── when is reducing open interest
+│       └── it should return the new open interest
+└── when the new skew is greater than the max skew
+    ├── when is not reducing skew
+    │   └── it should revert
+    └── when is reducing skew
+        └── it should return the new skew

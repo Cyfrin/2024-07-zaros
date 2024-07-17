@@ -1,0 +1,3 @@
+BranchFunctionSelectos_Integration_Test
+└── when branchFunctionSelectors is called
+    └── it should return the selectors of branch

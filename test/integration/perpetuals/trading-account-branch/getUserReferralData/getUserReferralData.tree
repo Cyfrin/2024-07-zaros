@@ -1,0 +1,4 @@
+GetUserReferralData_Unit_Test
+└── when getUserReferralData is called
+    ├── it should return the referral code
+    └── it should return if the referal code is custom

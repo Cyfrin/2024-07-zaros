@@ -1,0 +1,4 @@
+GetConfiguredOrderFees_Integration_Test
+└── given there's a market created
+    ├── it should return the maker fee
+    └── it should return the taker fee

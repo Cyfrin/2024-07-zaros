@@ -1,0 +1,6 @@
+ConfigureCollateralLiquidationPriority_Integration_Test
+├── given address array is empty
+│   └── it should revert
+└── given address array is not empty
+    ├── it should add
+    └── it should emit {LogConfigureCollateralLiquidationPriority} event

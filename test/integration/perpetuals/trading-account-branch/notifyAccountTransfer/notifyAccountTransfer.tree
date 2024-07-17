@@ -1,0 +1,5 @@
+NotifyAccountTransfer_Integration_Test
+├── given the sender is not the account nft contract
+│   └── it should revert
+└── given the sender is the account nft contract
+    └── it should transfer the trading account token

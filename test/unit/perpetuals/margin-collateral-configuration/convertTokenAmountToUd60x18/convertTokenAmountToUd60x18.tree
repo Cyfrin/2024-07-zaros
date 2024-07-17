@@ -1,0 +1,5 @@
+MarginCollateralConfiguration_ConvertTokenAmountToUd60x18_Test
+├── when margin collateral decimals is equal to system decimals
+│   └── it should return the amount to UD60x18
+└── when margin ciollateral decimals is not equal to system decimals
+    └── it should return the amount raised to the decimals of the system minus the decimals of the margin collateral to UD60x18

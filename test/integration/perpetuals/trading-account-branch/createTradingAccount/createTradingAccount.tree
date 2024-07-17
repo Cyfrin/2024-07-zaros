@@ -1,0 +1,21 @@
+CreateTradingAccount_Unit_Test
+├── given the trading account token is not set
+│   └── it should revert
+└── given the trading account token is set
+    ├── given the caller has no previous trading account
+    │   ├── it should emit {LogCreateTradingAccount}
+    │   └── it should return a valid accountId2
+    ├── given the caller has a previously created trading account
+    │   ├── it should emit {LogCreateTradingAccount}
+    │   └── it should return a valid tradingAccountId
+    └── when the user has a referral code
+        ├── when the referral code is custom
+        │   ├── when the referral code is invalid
+        │   │   └── it should revert
+        │   └── when the referral code is valid
+        │       └── it should emit {LogReferralSet} event
+        └── when the referral code is not custom
+            ├── when the referral code is equal to msg sender
+            │   └── it should revert
+            └── when the referral code is not equal to msg sender
+                └── it should emit {LogReferralSet} event

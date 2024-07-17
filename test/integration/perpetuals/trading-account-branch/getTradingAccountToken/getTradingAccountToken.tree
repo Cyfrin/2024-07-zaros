@@ -1,0 +1,3 @@
+GetTradingAccountToken_Unit_Test
+└── given there's an account token stored
+    └── it should return the stored account token

@@ -1,0 +1,5 @@
+RemoveMarket_Unit_Test
+├── when the market is already removed
+│   └── it should revert
+└── when the market was not removed
+    └── it should remove the market

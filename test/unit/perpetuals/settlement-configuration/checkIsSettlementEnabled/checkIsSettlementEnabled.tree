@@ -1,0 +1,5 @@
+SettlementConfiguration_CheckIsSettlementEnabled_Unit_Test
+├── given the configured settlement strategy is disabled
+│   └── it should revert
+└── given the configured settlement strategy is enabled
+    └── it should pass

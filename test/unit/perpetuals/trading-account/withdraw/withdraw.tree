@@ -1,0 +1,7 @@
+Withdraw_Unit_Test
+├── when the new margin collateral balance is zero
+│   ├── it should update the total deposited
+│   └── it should remove the collateral
+└── when the new margin collateral balance is not zero
+    ├── it should update the total deposited
+    └── it should update the new balance

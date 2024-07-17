@@ -1,0 +1,6 @@
+RemoveCollateralFromLiquidationPriority_Unit_Test
+├── when the collateral is already removed in the liquidation priority
+│   └── it should revert
+└── when the collateral was not removed in the liquidation priority
+    └── it should remove the collateral in the liquidation priority
+    └── it should keep the same order in the liquidation priority

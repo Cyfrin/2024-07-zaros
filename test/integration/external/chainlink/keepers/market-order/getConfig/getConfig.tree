@@ -1,0 +1,6 @@
+MarketOrderKeeper_GetConfig_Integration_Test
+└── given initialize contract
+    └── when call getConfig function
+        ├── it should return keeper owner
+        ├── it should return address of perps engine
+        └── it should return market id

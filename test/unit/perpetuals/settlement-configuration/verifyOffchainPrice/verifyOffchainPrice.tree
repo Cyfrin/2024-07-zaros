@@ -1,0 +1,11 @@
+SettlementConfiguration_VerifyOffchainPrice_Unit_Test
+├── when the strategy is different to data streams default
+│   └── it should revert
+└── when the strategy is equal to data streams default
+    ├── when the stream id from data streams strategy is different to premium report feed id
+    │   └── it should revert
+    ├── when the block timestamp is greater than the premium report validFromTimestamp sum with maxVerificationDelay
+    │   └── it should revert
+    └── when data streams report is valid
+        ├── it should return the bidX18
+        └── it should return the askX18

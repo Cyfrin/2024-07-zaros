@@ -1,0 +1,21 @@
+CreateTradingAccountAndMulticall_Unit_Test
+├── when the data array provides a reverting call
+│   └── it should revert
+└── when the data array does not provide a reverting call
+    ├── when the data array is null
+    │   ├── it should emit {LogCreateTradingAccount}
+    │   └── it should return a null results array
+    ├── when the data array is not null
+    │   ├── it should emit {LogCreateTradingAccount} event
+    │   └── it should return a valid results array
+    └── when the user has a referral code
+        ├── when the referral code is custom
+        │   ├── when the referral code is invalid
+        │   │   └── it should revert
+        │   └── when the referral code is valid
+        │       └── it should emit {LogReferralSet} event
+        └── when the referral code is not custom
+            ├── when the referral code is equal to msg sender
+            │   └── it should revert
+            └── when the referral code is not equal to msg sender
+                └── it should emit {LogReferralSet} event

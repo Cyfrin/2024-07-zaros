@@ -1,0 +1,17 @@
+LiquidationKeeper_CheckUpkeep_Integration_Test
+├── when the check lower bound is equal to the check upper bound
+│   └── it should revert
+├── when the check lower bound is higher than the check upper bound
+│   └── it should revert
+└── when the check lower bound is lower than the check upper bound
+    ├── when the perform lower bound is equal to the perform upper bound
+    │   └── it should revert
+    ├── when the perform lower bound is higher than the perform upper bound
+    │   └── it should revert
+    └── when the perform lower bound is lower than the perform upper bound
+        ├── given there are no liquidatable accounts ids
+        │   ├── it should return upkeepNeeded == false
+        │   └── it should return an array of accounts ids with id 0
+        └── given there are liquidatable accounts
+            ├── it should return upkeepNeeded == true
+            └── it should return the abi encoded liquidatable accounts ids

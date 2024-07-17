@@ -1,0 +1,23 @@
+ConfigureSystemParameters_Integration_Test
+├── when max positions per account is zero
+│   └── it should revert
+└── when max positions per account is not zero
+    ├── when liquidation fee is zero
+    │   └── it should revert
+    └── when liquidation fee is not zero
+        ├── when margin collateral recipient is zero
+        │   └── it should revert
+        └── when margin collateral recipient is not zero
+            ├── when order fee recipient is zero
+            │   └── it should revert
+            └── when order fee recipient is not zero
+                ├── when settlement fee recipient is zero
+                │   └── it should revert
+                └── when settlement fee recipient is not zero
+                    ├── when liquidation fee recipient is zero
+                    │   └── it should revert
+                    └── when liquidation fee recipient is not zero
+                        ├── when maxVerificationDelay is zero
+                        │   └── it should revert
+                        └── when maxVerificationdelay is not zero
+                            └── it should emit {LogConfigureSystemParameters} event

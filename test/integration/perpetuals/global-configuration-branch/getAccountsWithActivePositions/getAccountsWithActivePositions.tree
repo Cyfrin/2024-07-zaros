@@ -1,0 +1,5 @@
+GetAccountsWithActivePositions_Integration_Test
+├── given there are no accounts with active positions
+│   └── it should revert
+└── given there are accounts with active positions
+    └── it should return a array with the account id

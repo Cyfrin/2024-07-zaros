@@ -1,0 +1,9 @@
+CancelAllOffchainOrders_Integration_Test
+├── given the trading account does not exist
+│   └── it should revert
+└── given the trading account exists
+    ├── given the sender is not the owner
+    │   └── it should revert
+    └── given the sender is the owner
+        ├── it should increase the trading account nonce
+        └── it should emit {LogCancelAllOffchainOrders}

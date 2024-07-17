@@ -1,0 +1,6 @@
+MarginCollateralConfiguration_Configure_Test
+└── when configure is called
+    ├── it should update the maximum deposit cap
+    ├── it should update the loan to value
+    ├── it should update the decimals
+    └── it should update the price feed

@@ -1,0 +1,10 @@
+Upgrade_Integration_Test
+├── given the sender is not the owner
+│   └── it should revert
+└── given the sender is the owner
+    ├── when adding a new branch
+    │   └── it should return the new branch functions
+    ├── when replacing a branch
+    │   └── it should return the replaced branch function
+    └── when removing a branch
+        └── it should not return the removed branch functions

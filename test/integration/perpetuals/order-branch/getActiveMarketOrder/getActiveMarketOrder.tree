@@ -1,0 +1,5 @@
+GetActiveMarketOrder_Integration_Test
+├── given there's not a market order
+│   └── it should return zero
+└── given there's a market order
+    └── it should return the active market order

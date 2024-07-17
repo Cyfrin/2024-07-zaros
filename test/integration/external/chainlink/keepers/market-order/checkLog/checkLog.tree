@@ -1,0 +1,3 @@
+MarketOrderKeeper_CheckLog_Integration_Test
+└── when checkLog is called
+    └── it should revert

@@ -1,0 +1,9 @@
+WithdrawMarginUsd_Unit_Test
+├── when the margin collateral balance usd is greater than or equal to the required margin collateral
+│   ├── it should withdraw required margin collateral
+│   ├── it should return the required margin collateral
+│   └── it should return isMissingMargin as false
+└── when the margin collateral balance usd is smaller than the required margin collateral
+    ├── it should withdraw margin collateral balance usd
+    ├── it should return the margin collateral balance usd
+    └── it should return isMissingMargin as true

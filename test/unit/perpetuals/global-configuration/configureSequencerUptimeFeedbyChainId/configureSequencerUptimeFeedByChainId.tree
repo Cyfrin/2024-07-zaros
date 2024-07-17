@@ -1,0 +1,10 @@
+ConfigureSequencerUptimeFeedByChainId_Integration_Test
+├── when chain id array length is zero
+│   └── it should revert
+├── when sequencer uptime feed array length is zero
+│   └── it should revert
+├── when chain id array and sequencer uptime feed array has a different length
+│   └── it should revert
+└── when chain id array and sequencer uptime feed array are valid
+    ├── it should emit {LogSetSequencerUptimeFeed} event
+    └── it should configure the sequencer uptime feed with your chain id

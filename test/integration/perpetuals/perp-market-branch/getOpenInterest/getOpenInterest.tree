@@ -1,0 +1,5 @@
+GetOpenInterest_Integration_Test
+└── given there's a position created
+    ├── it should return longs open interest
+    ├── it should return shorts open interest
+    └── it should return total open interest

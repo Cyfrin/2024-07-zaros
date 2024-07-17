@@ -1,0 +1,58 @@
+FillMarketOrder_Integration_Test
+├── given the sender is not the keeper
+│   └── it should revert
+└── given the sender is the keeper
+    ├── given the market order does not exist
+    │   └── it should revert
+    └── given the market order exists
+        ├── given the perp market is disabled
+        │   └── it should revert
+        └── given the perp market is enabled
+            ├── given the settlement strategy is disabled
+            │   └── it should revert
+            └── given the settlement strategy is enabled
+                ├── given the report verification fails
+                │   └── it should revert
+                └── given the report verification passes
+                    ├── when the market order id mismatches
+                    │   └── it should revert
+                    └── when the market order id matches
+                        ├── given the data streams report is invalid
+                        │   └── it should revert
+                        └── given the data streams report is valid
+                            ├── given the account won't meet the margin requirement
+                            │   └── it should revert
+                            └── given the account will meet the margin requirement
+                                ├── given the market's OI limit will be exceeded
+                                │   └── it should revert
+                                └── given the market's OI limit won't be exceeded
+                                    ├── given the pnl is negative
+                                    │   ├── it should update the funding values
+                                    │   ├── it should update the open interest and skew
+                                    │   ├── it should update the account's active markets
+                                    │   ├── it should update the account's position
+                                    │   ├── it should deduct the pnl and fees
+                                    │   ├── it should transfer the pnl and fees
+                                    │   ├── it should emit a {LogFillOrder} event
+                                    │   └── it should delete the market order
+                                    ├── given the pnl is positive
+                                    │   ├── it should update the funding values
+                                    │   ├── it should update the open interest and skew
+                                    │   ├── it should update the account's active markets
+                                    │   ├── it should update the account's position
+                                    │   ├── it should add the pnl into the account's margin
+                                    │   ├── it should emit a {LogFillOrder} event
+                                    │   └── it should delete the market order
+                                    └── given the user has an open position
+                                        └── given the user will reduce the position
+                                            └── given the margin balance usd is under the initial margin usd required
+                                                ├── given the margin balance usd is under the maintenance margin usd required
+                                                │   └── it should revert
+                                                └── given the margin balance usd is over the maintenance margin usd required
+                                                    ├── it should update the funding values
+                                                    ├── it should update the open interest and skew
+                                                    ├── it should keep the account's active markets
+                                                    ├── it should update the account's position
+                                                    ├── it should transfer the pnl and fees
+                                                    ├── it should emit a {LogFillOrder} event
+                                                    └── it should delete the market order

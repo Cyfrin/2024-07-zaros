@@ -1,0 +1,12 @@
+CancelMarketOrder_Integration_Test
+├── given the sender is not the trading account owner
+│   └── it should revert
+└── given the sender is the trading account owner
+    ├── given there's no market order
+    │   └── it should revert
+    └── given there's a market order
+        ├── given the minimum lifetime has not yet passed
+        │   └── it should revert
+        └── given the minimum lifetime has passed
+            ├── it should cancel the active market order
+            └── it should emit {LogCancelMarketOrder} event

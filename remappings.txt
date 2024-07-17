@@ -1,0 +1,7 @@
+forge-std/=lib/forge-std/src/
+@zaros/=src/
+@balancer-labs/=node_modules/@balancer-labs/
+@prb-math/=lib/prb-math/src/
+@prb-test/=lib/prb-test/src/
+@openzeppelin/=lib/openzeppelin-contracts/contracts/
+@openzeppelin-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/

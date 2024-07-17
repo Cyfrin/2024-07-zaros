@@ -1,0 +1,9 @@
+Position_Load_Unit_Test
+├── given don't have a filled market order
+│   ├── it should return the size equal to zero
+│   ├── it should return the lastInteractionPrice equal to zero
+│   └── it should return the lastInteractionFundingFeePerUnit equal to zero
+└── given have a filled market order
+    ├── it should return the size
+    ├── it should return the lastInteractionPrice
+    └── it should return the lastInteractionFundingFeePerUnit

@@ -1,0 +1,3 @@
+GetFundingRate_Integration_Test
+└── given there's a market created
+    └── it should return the market's funding rate

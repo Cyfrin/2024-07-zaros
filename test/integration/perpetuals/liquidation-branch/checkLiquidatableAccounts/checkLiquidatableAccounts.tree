@@ -1,0 +1,7 @@
+CheckLiquidatableAccounts_Integration_Test
+├── when the bounds are zero
+│   └── it should return an empty array
+├── when there's no liquidatable account
+│   └── it should return an empty array
+└── when there are one or many liquidatable accounts
+    └── it should return an array with the liquidatable accounts ids

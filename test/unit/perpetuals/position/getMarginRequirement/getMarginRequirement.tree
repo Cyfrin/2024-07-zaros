@@ -1,0 +1,4 @@
+Position_GetMarginRequirement_Unit_Test
+└── when getMarginRequirement is called
+    ├── it should return the initial margin usd
+    └── it should return the maintenance margin rate usd

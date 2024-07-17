@@ -1,0 +1,28 @@
+MarginCollateralConfiguration_GetPrice_Test
+├── when price feed is zero
+│   └── it should revert
+└── when price feed is not zero
+    ├── when price feed decimals is greater than the system decimals
+    │   └── it should revert
+    └── when price feed decimals is less than or equal to the system decimals
+        ├── when sequencer uptime feed is not zero
+        │   ├── when sequencer uptime feed returns a invalid value
+        │   │   └── it should revert
+        │   └── when sequencer uptime feed returns a valid value
+        │       ├── when sequencer uptime feed is down
+        │       │   └── it should revert
+        │       └── when sequencer uptime feed is online
+        │           └── when grace period not over
+        │               └── it should revert
+        ├── when price feed returns a invalid value from latestRoundData
+        │   └── it should revert
+        └── when price feed returns a valid value from latestRoundData
+            ├── when the difference of block timestamp minus updateAt is greater than the price feed heartbet seconds
+            │   └── it should revert
+            └── when the difference of block timestamp minus updateAt is less than or equal than the price feed heartbet seconds
+                ├── when the answer is equal or less than the minAnswer
+                │   └── it should revert
+                ├── when the answer is equal or greater than the maxAnswer
+                │   └── it should revert
+                └── when the answer is greater than than the minAnswer and less than the maxAnswer
+                    └── it should return the price

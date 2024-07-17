@@ -1,0 +1,6 @@
+LiquidationKeeper_Initialize_Integration_Test
+└── given initialize contract with some wrong information
+    ├── when address of perps engine is zero
+    │   └── it should revert
+    └── when address of margin collateral recipient is zero
+        └── it should revert

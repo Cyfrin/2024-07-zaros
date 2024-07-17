@@ -1,0 +1,16 @@
+DepositMargin_Integration_Test
+├── when the amount is zero
+│   └── it should revert
+└── when the amount is not zero
+    ├── given the collateral type has insufficient deposit cap
+    │   └── it should revert
+    └── given the collateral type has sufficient deposit cap
+        ├── given the collateral type is not in the liquidation priority
+        │   └── it should revert
+        └── given the collateral type is in the liquidation priority
+            ├── given the trading account does not exist
+            │   └── it should revert
+            └── given the trading account exists
+                ├── it should emit {LogDepositMargin}
+                ├── it should transfer the amount from the sender to the trading account
+                └── it should increase the amount of margin collateral

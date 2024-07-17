@@ -1,0 +1,34 @@
+FillOffchainOrders_Integration_Test
+├── given the sender is not the keeper
+│   └── it should revert
+└── given the sender is the keeper
+    ├── when the price data is not valid
+    │   └── it should revert
+    └── when the price data is valid
+        ├── when an offchain order's size delta is zero
+        │   └── it should revert
+        └── when all offchain orders have a valid size delta
+            ├── when one of the trading accounts does not exist
+            │   └── it should revert
+            └── when all trading accounts exist
+                ├── when an offchain order's market id is not equal to the provided market id
+                │   └── it should revert
+                └── when an offchain order's market id is equal to the provided market id
+                    ├── when an offchain order's nonce is not equal to the trading account's nonce
+                    │   └── it should revert
+                    └── when all offchain orders' nonces are equal to the trading accounts' nonces
+                        ├── given an offchain order has already been filled
+                        │   └── it should revert
+                        └── given all offchain orders have not been filled
+                            ├── given the order's signer is not the trading account owner
+                            │   └── it should revert
+                            └── given the order's signer is the trading account owner
+                                ├── when an offchain order's target price can't be matched with its fill price
+                                │   └── it should not fill that order
+                                └── when all offchain orders target price can be matched with its fill price
+                                    ├── when the offchain order should increase the nonce
+                                    │   ├── it should increase the trading account nonce
+                                    │   └── it should fill the offchain order
+                                    └── when the offchain order shouldn't increase the nonce
+                                        ├── it should not increase the trading account nonce
+                                        └── it should fill the offchain order

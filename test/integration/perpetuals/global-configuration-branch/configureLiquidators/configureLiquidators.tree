@@ -1,0 +1,8 @@
+ConfigureLiquidators_Integration_Test
+├── given there are no liquidators
+│   └── it should revert
+└── given there are liquidators
+    ├── given number of liquidators and array of enable is different
+    │   └── it should revert
+    └── given number of liquidators and array of enable is equal
+        └── it should emit a {LogConfigureLiquidators} event

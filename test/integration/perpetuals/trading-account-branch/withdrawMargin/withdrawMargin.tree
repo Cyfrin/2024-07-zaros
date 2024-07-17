@@ -1,0 +1,19 @@
+WithdrawMargin_Integration_Test
+├── given the account does not exist
+│   └── it should revert
+└── given the account exists
+    ├── given the sender is not authorized
+    │   └── it should revert
+    └── given the sender is authorized
+        ├── when the amount is zero
+        │   └── it should revert
+        └── when the amount is not zero
+            ├── given there isn't enough margin collateral
+            │   └── it should revert
+            └── given there is enough margin collateral
+                ├── given the account won't meet the margin requirements
+                │   └── it should revert
+                └── given the account meets the margin requirements
+                    ├── it should emit a {LogWithdrawMargin} event
+                    ├── it should transfer the withdrawn amount to the sender
+                    └── it should decrease the margin collateral balance

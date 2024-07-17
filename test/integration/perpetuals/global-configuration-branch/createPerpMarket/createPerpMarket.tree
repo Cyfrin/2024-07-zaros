@@ -1,0 +1,40 @@
+CreatePerpMarket_Integration_Test
+├── when market id is zero
+│   └── it should revert
+└── when market id is not zero
+    ├── when length of name is zero
+    │   └── it should revert
+    └── when length of name is not zero
+        ├── when length of symbol is zero
+        │   └── it should revert
+        └── when length of symbol is not zero
+            ├── when price adapter is zero
+            │   └── it should revert
+            └── when price adapter is not zero
+                ├── when maintenance margin rate is zero
+                │   └── it should revert
+                └── when maintenance margin rate is not zero
+                    ├── when max open interest is zero
+                    │   └── it should revert
+                    └── when max open interest is not zero
+                        ├── when max skew is zero
+                        │   └── it should revert
+                        └── when max skew is not zero
+                            ├── when initial margin rate is less or equal to maintenance margin
+                            │   └── it should revert
+                            └── when initial margin is not less or equal to maintenance margin
+                                ├── when skew scale is zero
+                                │   └── it should revert
+                                └── when skew scale is not zero
+                                    ├── when min trade size is zero
+                                    │   └── it should revert
+                                    └── when min trade size is not zero
+                                        ├── when max funding velocity is zero
+                                        │   └── it should revert
+                                        └── when max funding velocity is not zero
+                                            ├── when priceFeedHeartbeatSeconds is zero
+                                            │   └── it should revert
+                                            └── when priceFeedHearbeatSeconds is not zero
+                                                ├── it should create perp market
+                                                ├── it should enable perp market
+                                                └── it should emit {LogCreatePerpMarket} event

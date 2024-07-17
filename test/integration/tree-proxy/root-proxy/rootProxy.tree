@@ -1,0 +1,3 @@
+RootProxy_Integration_Test
+└── when initialize contract
+    └── it should return the new contract

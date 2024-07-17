@@ -1,0 +1,9 @@
+SetTradingAccountToken_Integration_Test
+├── given the sender is not the owner
+│   └── it should revert
+└── given the sender is the owner
+    ├── when the tradingAccountToken is zero
+    │   └── it should revert
+    └── when the tradingAccountToken is not a zero
+        └── it should emit a {LogSetTradingAccountToken} event
+        └── it should update on storage

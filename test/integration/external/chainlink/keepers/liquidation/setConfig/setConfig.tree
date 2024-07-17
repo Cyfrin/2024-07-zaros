@@ -1,0 +1,9 @@
+LiquidationKeeper_SetConfig_Integration_Test
+└── given initialize contract
+    └── given call setConfig function
+        ├── when I am not the owner
+        │   └── it should revert
+        └── when I am the owner
+            ├── when perpsEngine is zero
+            │   └── it should revert
+            └── it should update config

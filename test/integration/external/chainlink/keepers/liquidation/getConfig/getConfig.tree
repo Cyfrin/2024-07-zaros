@@ -1,0 +1,5 @@
+LiquidationKeeper_GetConfig_Integration_Test
+└── given initialize contract
+    └── when call getConfig function
+        ├── it should return owner
+        └── it should return perpsEngine

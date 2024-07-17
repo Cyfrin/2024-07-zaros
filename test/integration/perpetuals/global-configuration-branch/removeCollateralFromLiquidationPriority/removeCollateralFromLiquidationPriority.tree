@@ -1,0 +1,9 @@
+RemoveCollateralFromLiquidationPriority_Integration_Test
+├── given collateral address is zero
+│   └── it should revert
+└── given collateral address is not zero
+    ├── when collateral has already been removed
+    │   └── it should revert
+    └── when collateral has not yet removed
+        ├── it should remove
+        └── it should emit {LogRemoveCollateralFromLiquidationPriority} event

@@ -1,0 +1,9 @@
+Position_GetState_Unit_Test
+└── when getState is called
+    ├── it should return the size
+    ├── it should return the notional value
+    ├── it should return the initial margin usd
+    ├── it should return the maintenance margin usd
+    ├── it should return the entry price
+    ├── it should return the accrued funding usd
+    └── it should return the unrealized pnl usd

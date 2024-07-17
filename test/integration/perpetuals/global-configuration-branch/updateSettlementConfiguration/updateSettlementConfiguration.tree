@@ -1,0 +1,13 @@
+UpdateSettlementConfiguration_Integration_Test
+├── given the sender is not the owner
+│   └── it should revert
+└── given the sender is the owner
+    ├── when perp market is not initialized
+    │   └── it should revert
+    └── when perp market is initialized
+        ├── when updating the market order configuration
+        │   ├── it should update
+        │   └── it should emit a {LogUpdateSettlementConfiguration} event
+        └── when updating the offchain orders configuration
+            ├── it should update
+            └── it should emit a {LogUpdateSettlementConfiguration} event

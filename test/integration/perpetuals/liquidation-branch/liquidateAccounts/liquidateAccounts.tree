@@ -1,0 +1,19 @@
+LiquidateAccounts_Integration_Test
+├── given the sender is not a registered liquidator
+│   └── it should revert
+└── given the sender is a registered liquidator
+    ├── when the accounts ids array is empty
+    │   └── it should return
+    └── when the accounts ids array is not empty
+        ├── given one of the accounts does not exist
+        │   └── it should revert
+        └── given all accounts exist
+            └── given there are liquidatable accounts in the array
+                ├── it should delete any active market order
+                ├── it should update each active market funding values
+                ├── it should close all active positions
+                ├── it should remove the account's all active markets
+                ├── it should emit a {LogLiquidateAccount} event
+                ├── it should update open interest value
+                └── it should update skew value
+

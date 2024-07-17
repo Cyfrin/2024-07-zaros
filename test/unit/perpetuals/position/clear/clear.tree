@@ -1,0 +1,5 @@
+Position_Clear_Unit_Test
+└── when clear is called
+    ├── it should return the size equal to zero
+    ├── it should return the lastInteractionPrice equal to zero
+    └── it should return the lastInteractionFundingFeePerUnit equal to zero

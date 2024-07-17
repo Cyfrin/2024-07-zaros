@@ -1,0 +1,5 @@
+AddMarket_Unit_Test
+├── when the market is already added
+│   └── it should revert
+└── when the market was not added
+    └── it should add the market
