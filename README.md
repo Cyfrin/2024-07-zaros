@@ -233,4 +233,6 @@ Tokens:
 
 Any issues as detailed by the previous Cyfrin audit report available [Here](https://github.com/Cyfrin/cyfrin-audit-reports/blob/main/reports/2024-07-13-cyfrin-zaros-v2.0.pdf)
 
+**Additional Issues as detected by LightChaser, detailed [here](https://github.com/Cyfrin/2024-07-zaros/issues/1)**
+
 [//]: # (known-issues-close)
